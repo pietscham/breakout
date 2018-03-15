@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <script src="./script/game.js"> </script>
+  <head>
+    <meta charset="utf-8" />
+    <title>Annaliese Pietsch</title>
+    <style>
+      * { padding: 0; margin: 0; }
+/*      canvas { background: #4b5970; display: block; margin: 0 auto; }*/
+    </style>
+  </head>
+
+  <body>
+    
+    <div style="position: relative;">
+      <canvas id="gameCanvas" width="100" height="100" 
+   style="position: absolute; left: 0; top: 0; z-index: 1;"></canvas>
+      <canvas id="lineCanvas" width="100" height="100" 
+   style="position: absolute; left: 0; top: 0; z-index: 2;"></canvas>
+      <canvas id="ballCanvas" width="100" height="100" 
+   style="position: absolute; left: 0; top: 0; z-index:3 ;"></canvas>
+      
+    </div>
+
+    <script>
+      var canvas = document.getElementById("gameCanvas");
+      var ballCanvas = document.getElementById("ballCanvas");
+      var ctx = canvas.getContext("2d");
+      var lineCanvas = document.getElementById("lineCanvas");
+      initGame(canvas, ballCanvas, lineCanvas);
+      drawGame();
+      document.addEventListener("keydown", keyDownHandler, false);
+      document.addEventListener('contextmenu', rightClick, false);
+      window.addEventListener('resize', resize, false);
+
+      
+      
+      setInterval(drawGame, 20);
+
+    </script>
+
+  </body>
+</html>
