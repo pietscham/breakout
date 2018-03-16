@@ -6,7 +6,6 @@
     <title>Annaliese Pietsch</title>
     <style>
       * { padding: 0; margin: 0; }
-/*      canvas { background: #4b5970; display: block; margin: 0 auto; }*/
     </style>
   </head>
 
@@ -30,7 +29,7 @@
       initGame(canvas, ballCanvas, lineCanvas);
       drawGame();
       document.addEventListener("keydown", keyDownHandler, false);
-      document.addEventListener('contextmenu', rightClick, false);
+      document.addEventListener('click', rightClick, false);
       window.addEventListener('resize', resize, false);
 
       
